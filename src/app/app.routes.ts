@@ -9,10 +9,17 @@ export const routes: Routes = [
     {
       path: 'menu',
       loadComponent: () => import('./pages/menu/menu.component').then(m => m.MenuComponent)
-    }
-    // {
-    //   path: 'about',
-    //   loadComponent: () =>
-    //     import('./features/about/about.component').then(m => m.AboutComponent),
-    // }
+    },
+    {
+        path: 'about',
+        loadComponent: () => import('./pages/about/about.component').then(m => m.AboutComponent)
+    },
+    {
+        path: 'coffee',
+        loadComponent: () => import('./pages/coffee/coffee.component').then(m => m.CoffeeComponent)
+    },
+    {
+        path: 'contact',
+        loadComponent: () => import('./pages/contact/contact.component').then(m => m.ContactComponent)
+    },
   ];
