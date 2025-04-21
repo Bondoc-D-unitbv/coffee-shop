@@ -2,17 +2,20 @@ import { Component, signal, OnInit } from '@angular/core';
 import { CoffeeService, Coffee } from '../../core/services/coffee.service';
 import { CoffeeCardComponent } from '../../shared/card/card.component';
 import { CommonModule } from '@angular/common';
+import { SearchBarComponent } from '../../shared/search-bar/search-bar.component';
+
 
 @Component({
   standalone: true,
   selector: 'app-home',
-  imports: [CommonModule, CoffeeCardComponent],
+  imports: [CommonModule, CoffeeCardComponent, SearchBarComponent],
   templateUrl: './home.component.html',
   styleUrls: ['./home.component.scss']
 })
 export class HomeComponent implements OnInit {
   coffees = signal<Coffee[]>([]);
   selectedCoffee = signal<string | null>(null);
+  searchQuery = signal('');
 
   constructor(private coffeeService: CoffeeService) {}
 
