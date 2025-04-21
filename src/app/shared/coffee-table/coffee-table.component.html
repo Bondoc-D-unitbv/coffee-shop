@@ -1,0 +1,21 @@
+<table class="coffee-table">
+    <thead>
+      <tr>
+        <th>Image</th>
+        <th>Name</th>
+        <th>Description</th>
+        <th>Price ($)</th>
+      </tr>
+    </thead>
+    <tbody>
+      @for (coffee of coffees(); track coffee.id) {
+        <tr>
+          <td><img [src]="coffee.imageUrl" alt="{{ coffee.name }}" class="thumb" /></td>
+          <td>{{ coffee.name }}</td>
+          <td>{{ coffee.description }}</td>
+          <td>{{ coffee.price.toFixed(2) }}</td>
+        </tr>
+      }
+    </tbody>
+  </table>
+  

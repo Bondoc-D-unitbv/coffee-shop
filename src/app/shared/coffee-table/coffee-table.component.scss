@@ -1,0 +1,23 @@
+.coffee-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 2rem;
+  
+    th, td {
+      border: 1px solid #ddd;
+      padding: 0.75rem;
+      text-align: left;
+    }
+  
+    th {
+      background-color: #f3ebe3;
+      color: #3a2417;
+    }
+  
+    .thumb {
+      width: 60px;
+      height: auto;
+      border-radius: 6px;
+    }
+  }
+  
