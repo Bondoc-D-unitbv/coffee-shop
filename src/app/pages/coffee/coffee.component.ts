@@ -1,12 +1,12 @@
 import { Component } from '@angular/core';
+import { CommonModule } from '@angular/common';
+import { HeaderComponent } from '../../shared/header/header.component';
 
 @Component({
-  selector: 'app-coffee',
   standalone: true,
-  imports: [],
+  selector: 'app-coffee',
+  imports: [CommonModule, HeaderComponent],
   templateUrl: './coffee.component.html',
-  styleUrl: './coffee.component.scss'
+  styleUrls: ['./coffee.component.scss']
 })
-export class CoffeeComponent {
-
-}
+export class CoffeeComponent {}

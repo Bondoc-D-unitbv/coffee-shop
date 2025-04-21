@@ -1,12 +1,14 @@
 import { Component } from '@angular/core';
+import { CommonModule } from '@angular/common';
+import { HeaderComponent } from '../../shared/header/header.component';
 
 @Component({
-  selector: 'app-contact',
   standalone: true,
-  imports: [],
+  selector: 'app-contact',
+  imports: [CommonModule, HeaderComponent],
   templateUrl: './contact.component.html',
-  styleUrl: './contact.component.scss'
+  styleUrls: ['./contact.component.scss']
 })
 export class ContactComponent {
-
+  email = "daniel.bondoc@student.unitbv.ro";
 }
