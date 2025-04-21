@@ -1,6 +1,15 @@
+<nav class="nav">
+    <a routerLink="/">Home</a>
+    <a routerLink="/menu">Menu</a>
+  </nav>  
+
 <app-search-bar (search)="searchQuery.set($event)"></app-search-bar>
 
 <h2>Our Special Coffee</h2>
+
+<div class="selected-coffee" *ngIf="selectedCoffee()">
+    <p>You selected: <strong>{{ selectedCoffee() }}</strong></p>
+</div>
 
 <div class="coffee-grid">
   <app-coffee-card
@@ -10,6 +19,3 @@
   </app-coffee-card>
 </div>
 
-<div class="selected-coffee" *ngIf="selectedCoffee()">
-  <p>You selected: <strong>{{ selectedCoffee() }}</strong></p>
-</div>

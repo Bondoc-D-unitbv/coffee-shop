@@ -10,3 +10,15 @@
     color: #6f4e37;
   }
   
+  .nav {
+    display: flex;
+    gap: 1rem;
+    padding: 1rem;
+    background: #f7f7f7;
+    a {
+      text-decoration: none;
+      color: #5c3d2e;
+      font-weight: bold;
+    }
+  }
+  

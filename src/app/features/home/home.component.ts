@@ -3,7 +3,7 @@ import { CoffeeService, Coffee } from '../../core/services/coffee.service';
 import { CoffeeCardComponent } from '../../shared/card/card.component';
 import { CommonModule } from '@angular/common';
 import { SearchBarComponent } from '../../shared/search-bar/search-bar.component';
-
+import { RouterModule } from '@angular/router';
 
 @Component({
   standalone: true,
