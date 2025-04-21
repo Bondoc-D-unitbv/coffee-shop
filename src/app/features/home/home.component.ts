@@ -4,11 +4,13 @@ import { CoffeeCardComponent } from '../../shared/card/card.component';
 import { CommonModule } from '@angular/common';
 import { SearchBarComponent } from '../../shared/search-bar/search-bar.component';
 import { RouterModule } from '@angular/router';
+import { HeaderComponent } from '../../shared/header/header.component';
+
 
 @Component({
   standalone: true,
   selector: 'app-home',
-  imports: [CommonModule, CoffeeCardComponent, SearchBarComponent],
+  imports: [CommonModule, RouterModule, CoffeeCardComponent, SearchBarComponent, HeaderComponent],
   templateUrl: './home.component.html',
   styleUrls: ['./home.component.scss']
 })
