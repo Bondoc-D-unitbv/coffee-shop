@@ -1,0 +1,28 @@
+.card {
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    padding: 1rem;
+    text-align: center;
+    max-width: 200px;
+  
+    img {
+      width: 100%;
+      border-radius: 8px;
+    }
+  
+    button {
+      margin-top: 0.5rem;
+      background: #6f4e37;
+      color: #fff;
+      border: none;
+      padding: 0.5rem 1rem;
+      border-radius: 8px;
+      cursor: pointer;
+  
+      &:hover {
+        background: #5a392b;
+      }
+    }
+  }
+  

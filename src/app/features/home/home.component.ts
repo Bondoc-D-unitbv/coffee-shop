@@ -1,12 +1,26 @@
-import { Component } from '@angular/core';
+import { Component, signal, OnInit } from '@angular/core';
+import { CoffeeService, Coffee } from '../../core/services/coffee.service';
+import { CoffeeCardComponent } from '../../shared/card/card.component';
+import { CommonModule } from '@angular/common';
 
 @Component({
-  selector: 'app-home',
   standalone: true,
-  imports: [],
+  selector: 'app-home',
+  imports: [CommonModule, CoffeeCardComponent],
   templateUrl: './home.component.html',
-  styleUrl: './home.component.scss'
+  styleUrls: ['./home.component.scss']
 })
-export class HomeComponent {
+export class HomeComponent implements OnInit {
+  coffees = signal<Coffee[]>([]);
+  selectedCoffee = signal<string | null>(null);
 
+  constructor(private coffeeService: CoffeeService) {}
+
+  ngOnInit(): void {
+    this.coffees.set(this.coffeeService.getCoffees()());
+  }
+
+  onOrder(coffeeName: string) {
+    this.selectedCoffee.set(coffeeName);
+  }
 }

@@ -1,1 +1,13 @@
-<p>home works!</p>
+<h2>Our Special Coffee</h2>
+
+<div class="coffee-grid">
+  <app-coffee-card
+    *ngFor="let coffee of coffees()"
+    [coffee]="coffee"
+    (order)="onOrder($event)">
+  </app-coffee-card>
+</div>
+
+<div class="selected-coffee" *ngIf="selectedCoffee()">
+  <p>You selected: <strong>{{ selectedCoffee() }}</strong></p>
+</div>

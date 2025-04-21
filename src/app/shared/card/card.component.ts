@@ -1,12 +1,19 @@
-import { Component } from '@angular/core';
+import { Component, Input, Output, EventEmitter } from '@angular/core';
+import { CommonModule } from '@angular/common';
+import { Coffee } from '../../core/services/coffee.service';
 
 @Component({
-  selector: 'app-card',
+  selector: 'app-coffee-card',
   standalone: true,
-  imports: [],
+  imports: [CommonModule],
   templateUrl: './card.component.html',
-  styleUrl: './card.component.scss'
+  styleUrls: ['./card.component.scss']
 })
-export class CardComponent {
+export class CoffeeCardComponent {
+  @Input() coffee!: Coffee;
+  @Output() order = new EventEmitter<string>();
 
+  orderNow() {
+    this.order.emit(this.coffee.name);
+  }
 }

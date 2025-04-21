@@ -1,1 +1,8 @@
-<p>card works!</p>
+<div class="card">
+    <img [src]="coffee.imageUrl" alt="{{ coffee.name }}" />
+    <h3>{{ coffee.name }}</h3>
+    <p>{{ coffee.description }}</p>
+    <p><strong>${{ coffee.price.toFixed(2) }}</strong></p>
+    <button (click)="orderNow()">Order Now</button>
+</div>
+  

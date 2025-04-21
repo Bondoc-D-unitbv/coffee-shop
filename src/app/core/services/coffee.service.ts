@@ -26,6 +26,13 @@ export class CoffeeService {
       description: 'Espresso with steamed milk foam.',
       price: 3.0,
       imageUrl: 'placeholder2.jpg'
+    },
+    {
+      id: 3,
+      name: 'Latte',
+      description: 'Smooth coffee with lots of milk.',
+      price: 3.5,
+      imageUrl: 'https://via.placeholder.com/150'
     }
   ]);
 
