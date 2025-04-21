@@ -5,6 +5,7 @@ import { CommonModule } from '@angular/common';
 import { SearchBarComponent } from '../../shared/search-bar/search-bar.component';
 import { RouterModule } from '@angular/router';
 import { HeaderComponent } from '../../shared/header/header.component';
+import { computed } from '@angular/core';
 
 
 @Component({
@@ -18,6 +19,12 @@ export class HomeComponent implements OnInit {
   coffees = signal<Coffee[]>([]);
   selectedCoffee = signal<string | null>(null);
   searchQuery = signal('');
+
+  filteredCoffees = computed(() =>
+    this.coffees().filter(c =>
+      c.name.toLowerCase().includes(this.searchQuery().toLowerCase())
+    )
+  );
 
   constructor(private coffeeService: CoffeeService) {}
 

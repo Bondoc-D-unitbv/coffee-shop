@@ -10,7 +10,7 @@
 
 <div class="coffee-grid">
   <app-coffee-card
-    *ngFor="let coffee of coffees()"
+    *ngFor="let coffee of filteredCoffees()"
     [coffee]="coffee"
     (order)="onOrder($event)">
   </app-coffee-card>
